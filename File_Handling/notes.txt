@@ -1,0 +1,112 @@
+============================== FILE HANDLING IN C
+==============================
+
+1.  INTRODUCTION File handling in C allows us to store data permanently
+    in files instead of temporary memory (RAM). Data remains saved even
+    after program execution ends.
+
+  --------------------------------------
+  2. FILE POINTER
+  --------------------------------------
+  FILE *fp;
+
+  - FILE is a predefined structure in
+  stdio.h - fp is a pointer to the file
+  --------------------------------------
+
+3. OPENING A FILE
+
+fp = fopen(“filename”, “mode”);
+
+Example: fp = fopen(“data.txt”, “r”);
+
+If file opening fails, fopen() returns NULL. Always check: if(fp ==
+NULL)
+
+  --------------------------------------
+  4. FILE MODES
+  --------------------------------------
+  “r” -> Read “w” -> Write (creates new
+  / overwrites existing) “a” -> Append
+  “rb” -> Read Binary “wb” -> Write
+  Binary “ab” -> Append Binary
+
+  --------------------------------------
+
+5. WRITING TO A FILE
+
+fprintf(fp, “Hello World”); fputc(‘A’, fp); fputs(“Text”, fp);
+
+For structures (binary): fwrite(&structureVar, sizeof(structureVar), 1,
+fp);
+
+  --------------------------------------
+  6. READING FROM A FILE
+  --------------------------------------
+  fscanf(fp, “%d”, &var); fgetc(fp);
+  fgets(buffer, size, fp);
+
+  For structures (binary):
+  fread(&structureVar,
+  sizeof(structureVar), 1, fp);
+  --------------------------------------
+
+7. CLOSING A FILE
+
+fclose(fp);
+
+Always close file after operations.
+
+  --------------------------------------
+  8. END OF FILE (EOF)
+  --------------------------------------
+  EOF means End Of File. Used while
+  reading files.
+
+  Example: while((ch = fgetc(fp)) !=
+  EOF)
+  --------------------------------------
+
+9. COMMON FILE OPERATIONS
+
+-   Writing data to file
+-   Reading data from file
+-   Appending data
+-   Copying one file to another
+-   Counting characters/lines
+-   Storing structures in file
+
+  --------------------------------------
+  10. IMPORTANT FUNCTIONS SUMMARY
+  --------------------------------------
+  fopen() -> Open file fclose() -> Close
+  file fprintf() -> Write formatted data
+  fscanf() -> Read formatted data
+  fgetc() -> Read character fputc() ->
+  Write character fgets() -> Read string
+  fputs() -> Write string fwrite() ->
+  Write binary data fread() -> Read
+  binary data
+
+  --------------------------------------
+
+11. BEST PRACTICES
+
+-   Always check if file opened successfully.
+-   Always close the file.
+-   Use binary mode for structures.
+-   Avoid data loss by choosing correct mode.
+-   Handle errors properly.
+
+  --------------------
+  12. VIVA QUESTIONS
+  --------------------
+
+1.  What is FILE pointer?
+2.  Difference between text and binary mode?
+3.  What is EOF?
+4.  Why check fp == NULL?
+5.  Difference between fprintf() and fwrite()?
+
+====================================== END OF NOTES
+======================================
