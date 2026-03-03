@@ -1,3 +1,6 @@
+//Program to find duplicate element using mathematical formula
+
+
 #include <stdio.h>
 
 int main() {

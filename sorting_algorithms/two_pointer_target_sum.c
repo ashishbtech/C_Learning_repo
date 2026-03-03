@@ -1,3 +1,5 @@
+//Program to find two numbers in sorted array whose sum equals target
+
 #include <stdio.h>
 
 int main() {

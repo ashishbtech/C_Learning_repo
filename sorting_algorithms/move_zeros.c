@@ -1,3 +1,5 @@
+//Program to move all zeros to end while maintaining order
+
 #include <stdio.h>
 
 int main() {

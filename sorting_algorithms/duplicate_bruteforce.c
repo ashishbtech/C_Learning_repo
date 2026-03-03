@@ -1,3 +1,6 @@
+//Program to find duplicate element in an array using brute force approach
+
+
 #include <stdio.h>
 
 int main() {
